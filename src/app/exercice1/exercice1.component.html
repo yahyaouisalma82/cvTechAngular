@@ -1,0 +1,7 @@
+<div class="container">
+  <p>exercice1 works!</p>
+  <div [style.backgroundColor]="colorDad" class="row">color</div>
+  <input type="text" #colorMe (change)="changeColor(colorMe.value)" />
+  <!-- <button class="btn btn-primary" (click)="backToDefault()">Default</button> -->
+  <button class="btn btn-primary" (click)="colorMyDad()">Color My dad</button>
+</div>
