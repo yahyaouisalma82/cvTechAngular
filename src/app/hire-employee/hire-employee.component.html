@@ -1,0 +1,7 @@
+<p style="font-size: 32px">Hired employees </p>
+<div class="list-group">
+    <button *ngFor="let userDetails of hiredPeople" type="button" class="list-group-item list-group-item-action">
+      <img src="{{userDetails.path | defaultImage }}" class="img-rounded thumb" alt="cat" />
+     {{userDetails.firstname}} {{userDetails.name}}
+    </button>
+</div>

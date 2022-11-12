@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CvServiceService } from '../CvService/cv-service.service';
 import { cvModel } from '../Models/cvModel';
 
 @Component({
@@ -8,33 +9,14 @@ import { cvModel } from '../Models/cvModel';
 })
 export class CvTechComponent implements OnInit {
   showOrHideForm=false; 
-  users: cvModel[] = [
-    {
-      id: 1,
-      name: 'yahyaoui',
-      firstname: 'salma',
-      age: 22,
-      cin: 11,
-      job: 'Doctor',
-      path: '../../assets/images/gl3.jpeg',
-    },
-    {
-      id: 2,
-      name: 'smida',
-      firstname: 'asma',
-      age: 22,
-      cin: 11,
-      job: 'Developer',
-      path: 'http://placekitten.com/100/100',
-    },
-  ]; 
+  users: cvModel[] =this.cvService.getUsers()
   selectedUser:cvModel=this.users[0]
   setSelectedUser(user: cvModel) {
     this.selectedUser = user;
   }
-  constructor() { }
+  constructor(private cvService:CvServiceService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
   }
   showOnCard(user:any){
     this.selectedUser=user

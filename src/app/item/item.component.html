@@ -1,7 +1,7 @@
 
 <div class="list-group">
     <button type="button" class="list-group-item list-group-item-action "(click)="selectUser()">
-      <img src="{{userDetails.path}}" class="img-rounded thumb" alt="cat" />
+      <img src="{{userDetails.path | defaultImage }}" class="img-rounded thumb" alt="cat" />
      {{userDetails.firstname}} {{userDetails.name}}
   </button>
 </div>

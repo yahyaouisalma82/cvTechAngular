@@ -2,6 +2,7 @@
     
     <div class="row" > 
         <app-list-component class="col-md-6"  [listOfUsers]="users" (valueChange)="showOnCard($event)"></app-list-component>
-        <app-carte-visite class="col-md-6" [showForm]="showOrHideForm" [showedUser]="selectedUser"></app-carte-visite>
+        <app-carte-visite class="col-md-6"  [showForm]="showOrHideForm" [showedUser]="selectedUser"></app-carte-visite>
     </div>
+    <app-hire-employee></app-hire-employee>
 </div>

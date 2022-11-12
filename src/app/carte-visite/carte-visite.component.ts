@@ -1,6 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { HireService } from '../hireService/hire.service';
 import { cvModel } from '../Models/cvModel';
-
 @Component({
   selector: 'app-carte-visite',
   templateUrl: './carte-visite.component.html',
@@ -10,9 +10,12 @@ export class CarteVisiteComponent implements OnInit {
   @Input() showForm=false;
   @Input() showedUser :cvModel= {id:0,name:"",firstname:"",age:0,cin:0,job:"",path:""};
   
-  constructor() {}
+  constructor(private hireService:HireService) {}
 
   ngOnInit(): void {}
+  hireMe(){
+    this.hireService.hire(this.showedUser)
+  }
   changeInfo(attribut: string, value: string) {
     switch (attribut) {
       case 'name': {
