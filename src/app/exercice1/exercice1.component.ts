@@ -22,6 +22,6 @@ export class Exercice1Component implements OnInit {
   @Output() colorEmetter = new EventEmitter();
 
   colorMyDad() {
-    this.colorEmetter.emit(this.myFavColor);
+    this.colorEmetter.emit(this.color);
   }
 }

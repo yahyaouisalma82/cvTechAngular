@@ -7,7 +7,7 @@ const APP_ROUTES: Routes = [
   { path: 'onlyHeader', component: HeaderComponent },
   { path: 'cv', component: CvTechComponent },
   { path: 'miniword', component: MiniwordComponent },
-  { path: 'ColorMe', component: PereComponent },
+  { path: 'ColorMe/:color', component: PereComponent },
 
 ];
 export const ROUTING = RouterModule.forRoot(APP_ROUTES);

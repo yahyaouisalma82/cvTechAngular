@@ -18,6 +18,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { ROUTING } from './app.routing';
 import { HeaderComponent } from './header/header.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
+import { CvDetailPageComponent } from './CVTechApp/cv-detail-page/cv-detail-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,7 @@ import { RouterSimulatorComponent } from './router-simulator/router-simulator.co
     CvTechComponent,
     ItemComponent,
     MiniwordComponent, 
-    RainbowdirDirective, DefaultImagePipe, HireEmployeeComponent, HeaderComponent, RouterSimulatorComponent, 
+    RainbowdirDirective, DefaultImagePipe, HireEmployeeComponent, HeaderComponent, RouterSimulatorComponent, CvDetailPageComponent, 
   ],
   imports: [
     BrowserModule,

@@ -7,12 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./router-simulator.component.css']
 })
 export class RouterSimulatorComponent implements OnInit {
-
+  color:string='lightblue'
   constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
   onNavigate(route:any){
-    this.router.navigate([route])
+    this.router.navigate([route,this.color])
   }
 }
