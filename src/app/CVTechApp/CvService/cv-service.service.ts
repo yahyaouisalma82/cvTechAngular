@@ -51,4 +51,7 @@ export class CvServiceService {
       return user
     return this.myuser
   }
+  removeUser(id:number){
+    this.users= this.users.filter(user=>user.id != id)
+  }
 }

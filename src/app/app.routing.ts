@@ -9,15 +9,16 @@ const APP_ROUTES: Routes = [
   {
     path: 'cv',
     component: CvTechComponent,
-    children: [
-      { path: '', component: CvTechComponent },
-      // {path:'details',redirectTo:'', pathMatch:'full'},
-      { path: 'details/:id', component: CvDetailPageComponent },
-    ],
+    // children: [
+    //   { path: '', component: CvTechComponent },
+    //   // { path: 'hi', component: MiniwordComponent },
+    //   // {path:'details',redirectTo:'', pathMatch:'full'},
+    //   { path: 'details/:id', component: MiniwordComponent },
+    // ],
   },
   { path: 'miniword', component: MiniwordComponent },
-  {path: 'cv/details/:id', component: CvDetailPageComponent },
+  { path: 'cv/details/:id', component: CvDetailPageComponent },
   { path: 'ColorMe/:color', component: PereComponent },
-]; 
+];
 
 export const ROUTING = RouterModule.forRoot(APP_ROUTES);
