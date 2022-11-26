@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Exercice1Component } from './exercice1/exercice1.component';
+import { Component } from '@angular/core'; 
 
 @Component({
   selector: 'app-root',
