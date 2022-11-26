@@ -32,8 +32,23 @@ export class CvServiceService {
       job: 'Developer',
       path: '  ',}
   ]; 
+  myuser:cvModel={
+    id: 0,
+    name: '',
+    firstname: '',
+    age: 0,
+    cin: 0,
+    job: '',
+    path: '',
+  };
   constructor() { }
   getUsers():cvModel[]{
     return this.users
+  } 
+  getUser(id:number):cvModel{ 
+    const user= this.users.find(user=>user.id==id)
+    if(user)
+      return user
+    return this.myuser
   }
 }
