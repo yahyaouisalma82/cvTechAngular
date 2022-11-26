@@ -13,6 +13,9 @@ export class RouterSimulatorComponent implements OnInit {
   ngOnInit(): void {
   }
   onNavigate(route:any){
-    this.router.navigate([route,this.color])
+    if(route=="ColorMe")
+      this.router.navigate([route,this.color])
+    else
+      this.router.navigate([route])
   }
 }

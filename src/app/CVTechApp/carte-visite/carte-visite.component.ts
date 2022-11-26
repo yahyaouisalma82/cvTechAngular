@@ -18,7 +18,7 @@ export class CarteVisiteComponent implements OnInit {
     this.hireService.hire(this.showedUser)
   }
   viewDetails(){
-    this.router.navigate(['details',this.showedUser.id])
+    this.router.navigate(['cv/details',this.showedUser.id])
   }
   changeInfo(attribut: string, value: string) {
     switch (attribut) {
