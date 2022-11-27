@@ -9,16 +9,13 @@ import { cvModel } from '../Models/cvModel';
 })
 export class CarteVisiteComponent implements OnInit {
   @Input() showForm=false;
-  @Input() showedUser :cvModel= {id:0,name:"",firstname:"",age:0,cin:0,job:"",path:""};
+  @Input() showedUser :cvModel =null;
   
   constructor(private hireService:HireService,private router:Router) {}
 
   ngOnInit(): void {}
   hireMe(){
     this.hireService.hire(this.showedUser)
-  }
-  viewDetails(){
-    this.router.navigate(['cv/details',this.showedUser.id])
   }
   changeInfo(attribut: string, value: string) {
     switch (attribut) {

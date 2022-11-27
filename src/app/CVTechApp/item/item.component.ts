@@ -13,7 +13,7 @@ export class ItemComponent implements OnInit {
     name: '',
     firstname: '',
     age: 0,
-    cin: 0,
+    cin: '',
     job: '',
     path: '',
   };

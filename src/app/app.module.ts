@@ -19,6 +19,7 @@ import { ROUTING } from './app.routing';
 import { HeaderComponent } from './header/header.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 import { CvDetailPageComponent } from './CVTechApp/cv-detail-page/cv-detail-page.component';
+import { LoginComponent } from './CVTechApp/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,11 +30,11 @@ import { CvDetailPageComponent } from './CVTechApp/cv-detail-page/cv-detail-page
     CvTechComponent,
     ItemComponent,
     MiniwordComponent, 
-    RainbowdirDirective, DefaultImagePipe, HireEmployeeComponent, HeaderComponent, RouterSimulatorComponent, CvDetailPageComponent, 
+    RainbowdirDirective, DefaultImagePipe, HireEmployeeComponent, HeaderComponent, RouterSimulatorComponent, CvDetailPageComponent, LoginComponent, 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule,ToastrModule.forRoot(),ROUTING
+    AppRoutingModule,FormsModule,ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
