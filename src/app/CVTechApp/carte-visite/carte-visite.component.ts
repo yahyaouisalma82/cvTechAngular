@@ -1,5 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { CvServiceService } from '../CvService/cv-service.service';
 import { HireService } from '../hireService/hire.service';
 import { cvModel } from '../Models/cvModel';
 @Component({
@@ -11,9 +12,12 @@ export class CarteVisiteComponent implements OnInit {
   @Input() showForm=false;
   @Input() showedUser :cvModel =null;
   
-  constructor(private hireService:HireService,private router:Router) {}
+  constructor(private hireService:HireService,private router:Router,private cvService:CvServiceService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+    this.cvService.selectCvSubject.subscribe(cv=>this.showedUser=cv)
+  }
   hireMe(){
     this.hireService.hire(this.showedUser)
   }

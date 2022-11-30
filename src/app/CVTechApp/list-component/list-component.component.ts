@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { CvServiceService } from '../CvService/cv-service.service';
 import { cvModel } from '../Models/cvModel';
 
 @Component({
@@ -11,8 +12,9 @@ export class ListComponentComponent implements OnInit {
   constructor() {}
   ngOnInit(): void {}
 
-  @Output() valueChange = new EventEmitter();
-  sendToCvTech(user: any) {
-    this.valueChange.emit(user);
-  }
+  // @Output() valueChange = new EventEmitter();
+  // sendToCvTech(user: any) {
+  //   this.valueChange.emit(user); 
+  // }
 }
+// (valueChange)="sendToCvTech($event)" //kent fl html

@@ -10,16 +10,18 @@ import { cvModel } from '../Models/cvModel';
 export class CvTechComponent implements OnInit {
   showOrHideForm=false; 
   users: cvModel[] =[]
-  selectedUser:cvModel=this.users[0]
-  setSelectedUser(user: cvModel) {
-    this.selectedUser = user;
-  }
+  //selectedUser:cvModel=this.users[0]
+  // setSelectedUser(user: cvModel) {
+  //   this.selectedUser = user;
+  // }
   constructor(private cvService:CvServiceService) { }
 
   ngOnInit(): void { 
     this.users=this.cvService.getUsers()
   }
-  showOnCard(user:any){
-    this.selectedUser=user
-  }
+  // showOnCard(user:any){
+  //   this.selectedUser=user
+  // }
 }
+//(valueChange)="showOnCard($event)"//kent fl html
+//[showedUser]="selectedUser"//kent fl carte
