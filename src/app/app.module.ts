@@ -18,7 +18,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { HeaderComponent } from './header/header.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 import { CvDetailPageComponent } from './CVTechApp/cv-detail-page/cv-detail-page.component';
-import { LoginComponent } from './CVTechApp/login/login.component'; 
+import { LoginComponent } from './login/login.component';
+import { AddPersonComponent } from './CVTechApp/add-person/add-person.component';
+import { ObservableComponent } from './observable/observable.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,7 @@ import { LoginComponent } from './CVTechApp/login/login.component';
     CvTechComponent,
     ItemComponent,
     MiniwordComponent, 
-    RainbowdirDirective, DefaultImagePipe, HireEmployeeComponent, HeaderComponent, RouterSimulatorComponent, CvDetailPageComponent, LoginComponent, 
+    RainbowdirDirective, DefaultImagePipe, HireEmployeeComponent, HeaderComponent, RouterSimulatorComponent, CvDetailPageComponent, LoginComponent, AddPersonComponent, ObservableComponent, 
   ],
   imports: [
     BrowserModule, 

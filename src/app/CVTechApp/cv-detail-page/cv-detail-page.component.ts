@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { CvServiceService } from '../CvService/cv-service.service';
+import { HireEmployeeComponent } from '../hire-employee/hire-employee.component';
+import { HireService } from '../hireService/hire.service';
 import { cvModel } from '../Models/cvModel';
 
 @Component({
@@ -18,14 +21,19 @@ export class CvDetailPageComponent implements OnInit {
     job: '',
     path: '',
   }; 
-  constructor(private router: ActivatedRoute,private cvService:CvServiceService,private router2:Router) {
+  hired=false
+  constructor(private router: ActivatedRoute,private hireService :HireService, private cvService:CvServiceService,private router2:Router) {
     router.params.subscribe((params) => { 
       this.cvContent=this.cvService.getUser(params['id'])
+      if(hireService.hired.includes(this.cvContent))
+        this.hired=true
     });
   }
+  imageObservable:Observable<string>=this.cvService.imageObservable
   ngOnInit(): void {}
   fireMe(){
-    this.cvService.removeUser(this.cvContent.id)
+    this.hireService.fire(this.cvContent.id)
+    this.hired=false
     this.router2.navigate(["cv"])
   }
 }

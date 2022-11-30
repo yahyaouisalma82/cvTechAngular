@@ -6,14 +6,14 @@ import { NgForm } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-
+export class LoginComponent implements OnInit { 
+  placeholdermail="myUserEmail"
   constructor() { }
 
   ngOnInit(): void {
   }
   sendForm(form:NgForm){
-    console.log("eee",form);
+    console.log("eee",form.formDirective);
     
   }
 }

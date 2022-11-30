@@ -1,0 +1,67 @@
+<div class="wrapper">
+  <div class="logo">
+    <img
+      src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png"
+      alt=""
+    />
+  </div>
+  <div class="text-center mt-4 name">CVTech</div>
+  <form class="p-3 mt-3" #formulaire="ngForm">
+    <div
+      class="form-field d-flex align-items-center"
+      [ngClass]="{ borderred: useremail.invalid && useremail.touched }"
+    >
+      <span class="far fa-user"></span>
+      <input
+        required
+        email
+        type="text"
+        class="form-control"
+        #useremail="ngModel"
+        name="useremail"
+        id="useremail"
+        [ngModel]="placeholdermail"
+      />
+    </div>
+    <div
+      class="alert alert-danger myalert"
+      *ngIf="useremail.invalid && useremail.dirty"
+    >
+      Invalid usermail
+    </div>
+
+    <div
+      class="form-field d-flex align-items-center"
+      [ngClass]="{ borderred: password.invalid && password.touched }"
+    >
+      <span class="fas fa-key"></span>
+      <input
+        required
+        minlength="4"
+        type="password"
+        #password="ngModel"
+        name="password"
+        id="pwd"
+        ngModel
+        placeholder="Password"
+      />
+    </div>
+    <div
+      class="alert alert-danger myalert"
+      *ngIf="password.invalid && password.dirty"
+    >
+      Minimum length is 4 charcters
+    </div>
+    <button
+      (click)="sendForm(formulaire)"
+      [disabled]="formulaire.invalid"
+      type="submit"
+      class="btn mt-3"
+    >
+      Login
+    </button>
+  </form>
+  <div class="text-center fs-6">
+    <a href="#">Forget password?</a> or <a href="#">Sign up</a>
+  </div>
+</div>

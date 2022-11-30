@@ -19,4 +19,8 @@ export class HireService {
   getHired(){
     return this.hired
   }
+  
+  fire(id:number){
+    this.hired= this.hired.filter(user=>user.id != id)
+  }
 }

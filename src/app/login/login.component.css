@@ -105,3 +105,11 @@ body {
 input.ng-invalid.ng-touched{
     border:  red 1px solid;
 }
+
+.borderred{
+    border:  red 1px solid;
+}
+.myalert{
+    margin-bottom: 10px;
+    padding: 3px;
+}

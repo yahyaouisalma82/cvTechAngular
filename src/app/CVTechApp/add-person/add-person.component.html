@@ -1,0 +1,83 @@
+<form #formulaire="ngForm">
+  <div class="form-row col-md-6">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+      ngModel
+      name="name"
+        required
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="Name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="firstname">FirstName</label>
+      <input
+      ngModel
+        type="text"
+        class="form-control"
+        name="firstname"
+        placeholder="Firstname"
+      />
+    </div>
+
+    <label for="job">Job</label>
+    <input
+       
+      id="job"
+      type="text"
+      ngModel
+      name="job"
+      placeholder="job"
+      class="form-control"
+    />
+
+    <label for="age">Age</label>
+    <input
+       
+      pattern="\d{1,3}"
+      id="age"
+      type="number"
+      ngModel
+      name="age"
+      placeholder="age"
+      class="form-control"
+    />
+
+    <label for="cin">Cin</label>
+    <input
+       
+      placeholder="1199"
+      id="cin"
+      type="number"
+      ngModel
+      name="cin"
+      class="form-control"
+    />
+
+    <label for="path">Path</label>
+    <input
+      placeholder="path"
+      id="path"
+      type="text"
+      ngModel
+      name="path"
+      class="form-control"
+    />
+
+    <button
+      [ngStyle]="{
+        marginTop: '15px',
+        marginLeft: '40%'
+      }"
+      [disabled]="formulaire.invalid"
+      class="btn btn-primary"
+      (click)="addMe(formulaire)"
+      type="button"
+    >
+      Envoyer
+    </button>
+  </div>
+</form>
