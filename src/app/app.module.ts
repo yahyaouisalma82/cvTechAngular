@@ -14,12 +14,11 @@ import { FormsModule } from '@angular/forms';
 import { RainbowdirDirective } from './rainbowDir/rainbowdir.directive';
 import { DefaultImagePipe } from './CVTechApp/defaultImage/default-image.pipe'; 
 import { HireEmployeeComponent } from './CVTechApp/hire-employee/hire-employee.component';
-import { ToastrModule } from 'ngx-toastr';
-import { ROUTING } from './app.routing';
+import { ToastrModule } from 'ngx-toastr'; 
 import { HeaderComponent } from './header/header.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 import { CvDetailPageComponent } from './CVTechApp/cv-detail-page/cv-detail-page.component';
-import { LoginComponent } from './CVTechApp/login/login.component';
+import { LoginComponent } from './CVTechApp/login/login.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +32,7 @@ import { LoginComponent } from './CVTechApp/login/login.component';
     RainbowdirDirective, DefaultImagePipe, HireEmployeeComponent, HeaderComponent, RouterSimulatorComponent, CvDetailPageComponent, LoginComponent, 
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, 
     AppRoutingModule,FormsModule,ToastrModule.forRoot(),
   ],
   providers: [],
