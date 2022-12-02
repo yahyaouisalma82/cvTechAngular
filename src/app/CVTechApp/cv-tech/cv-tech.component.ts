@@ -9,7 +9,7 @@ import { cvModel } from '../Models/cvModel';
 })
 export class CvTechComponent implements OnInit {
   showOrHideForm=false; 
-  users: cvModel[] =[]
+  users: cvModel[] =[];
   //selectedUser:cvModel=this.users[0]
   // setSelectedUser(user: cvModel) {
   //   this.selectedUser = user;
