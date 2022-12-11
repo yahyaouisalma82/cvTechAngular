@@ -1,9 +1,26 @@
-<h1>Cv {{cvContent.name }} {{cvContent.firstname}}</h1>
-<div class="container">
-    <h3>FirstName : {{cvContent.firstname}}</h3>
-    <h3>Job : {{cvContent.job}}</h3>
-    <h3>Age : {{cvContent.age}}</h3>
-    <button [hidden]="!hired" class="btn btn-danger " (click)="fireMe()">Fire</button>
-    <img 
-    class="rounded-circle" src="assets/images/{{imageObservable|async}}" height="200px"width="200px">
+<div class="d-flex justify-content-center" *ngIf="cvContent">
+  <div class="col-md-8 push-lg-2">
+    <div class="tab-content p-b-3">
+      <h1>Personal Details</h1>
+      <div class="container inner">
+        <h3><strong>Name:</strong> {{ cvContent?.name }}</h3>
+        <h3><strong>Firstname :</strong> {{ cvContent.firstname }}</h3>
+        <h3><strong>Job :</strong> {{ cvContent.job }}</h3>
+        <h3><strong>Age :</strong> {{ cvContent.age }}</h3>
+        <div class="d-flex justify-content-center">
+          <button [hidden]="!hired" class="btn btn-danger" (click)="fireMe()">
+            Fire
+          </button>
+        </div>
+        <div class="d-flex justify-content-center">
+          <img
+            class="rounded-circle"
+            src="assets/images/{{ imageObservable | async }}"
+            height="200px"
+            width="200px"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

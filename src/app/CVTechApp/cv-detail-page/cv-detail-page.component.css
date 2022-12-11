@@ -1,0 +1,29 @@
+h1{
+    color: red;
+    text-align: center;
+    text-decoration: dotted;
+}
+.inner{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+h3{
+    color: black;
+    margin: 50 ;
+}
+p{
+    font-size:25px
+}
+.align{
+
+    align-items: center;
+}
+div{
+    margin: 10px;
+}
+button{
+    font-size: large;
+    width: 100px;
+}
